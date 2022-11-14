@@ -7,5 +7,5 @@
   become: true
   roles:
    - role: nginx
-  
+   - role: php  
 
