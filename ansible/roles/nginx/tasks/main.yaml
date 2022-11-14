@@ -25,7 +25,7 @@
     - "{{virtualhosts}}"
 
 
-- name: Add vhost symlink in sites-enabled.
+- name: Añadir enlace simbólicos de los virtualhosts en sites-enabled.
   file:
     src: /etc/nginx/sites-available/{{item["name"]}}.conf
     dest: /etc/nginx/sites-enabled/{{item["name"]}}.conf
@@ -58,10 +58,10 @@
   notify: restart nginx
 
 
-- name: Desactivar virtualhosts definidos en otra lista
-  file:
-    path: /etc/nginx/sites-enabled/{{item["name"]}}.conf
-    state: absent
-  with_items:
-    - "{{virtualhosts}}"
-  notify: restart nginx
+#- name: Desactivar virtualhosts definidos en otra lista
+#  file:
+#    path: /etc/nginx/sites-enabled/{{item["name"]}}.conf
+#    state: absent
+#  with_items:
+#    - "{{desactivar_vhosts}}"
+#  notify: restart nginx

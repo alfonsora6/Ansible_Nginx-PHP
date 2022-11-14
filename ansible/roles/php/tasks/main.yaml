@@ -13,4 +13,6 @@
     owner: www-data
     group: www-data
     mode: 0644
+  with_items:
+    - "{{virtualhosts}}"
 
