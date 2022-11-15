@@ -12,4 +12,7 @@ virtualhosts:
       documentroot: /srv/www/pagina2
       errorlog: error_pagina2
       accesslog: access_pagina2
+  
+desactivar_vhost:
+  - name: pagina2
 

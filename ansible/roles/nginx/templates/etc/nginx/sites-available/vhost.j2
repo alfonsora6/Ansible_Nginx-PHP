@@ -18,7 +18,5 @@ server {
             fastcgi_pass unix:/run/php/php7.4-fpm.sock;
         } 
 
-	location /directorio {
-	rewrite ^/directorio$ http://www.pagina1.org/nuevodirectorio;
-	}
+	rewrite ^/$ http://www.pagina1.org/principal;
 }
